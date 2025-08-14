@@ -1,0 +1,167 @@
+/* Base setup */
+body {
+    background-color: #f5f3f0;
+    color: #8b7355;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+#background{
+	position: fixed;
+	bottom: 50px;
+	right: 0px;
+	z-index: 99;
+}
+
+#background img{
+	width: calc(100vw - 200px);
+    	height: calc(100vh - 260px);
+    	object-fit: contain;
+}
+
+/* White strip behind header & logo */
+#top-bar {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* covers logo height */
+    z-index: 99; /* sits behind logo & header */
+}
+
+/* Logo */
+#logo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 101;
+}
+
+#logo img {
+    width: 100px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* Header */
+#header {
+    background-color: transparent; /* transparent so white bar shows */
+    color: #8b4e2f;
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #c4a484;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 400;
+}
+
+
+/* Navigation */
+#nav {
+    width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 80px; /* below header */
+    bottom: 50px; /* above footer */
+    border-right: 2px solid #c4a484;
+    overflow-y: auto;
+}
+
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#nav li img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+#nav a {
+    display: block;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #8b7355;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#nav a:hover {
+    background-color: #f5f3f0;
+    color: #6d5940;
+}
+
+/* Special highlight */
+#nav li.highlight {
+    display: flex;
+    align-items: center;
+    background-color: #8b4e2f; /* brown pill background */
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#nav li.highlight img {
+    background-color: #ffffff; /* white circle behind icon */
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 4px;
+    width: 28px;
+    height: 28px;
+}
+
+#nav li.highlight a {
+    color: #ffffff; /* white text */
+    padding: 10px 16px;
+    flex: 1;
+}
+
+#nav li.highlight a:hover {
+    background-color: #6d3923;
+}
+
+
+/* Content */
+#content {
+    margin-left: 220px; /* nav width + spacing */
+    padding: 30px;
+    padding-top: 100px; /* space for header */
+    padding-bottom: 70px; /* space for footer */
+}
+
+/* Footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #8b4e2f;
+    color: #f5f3f0;
+    padding: 12px;
+    font-size: 14px;
+    border-top: 2px solid #c4a484;
+}
